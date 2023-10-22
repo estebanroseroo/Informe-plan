@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main" pageWidth="600" pageHeight="842" columnWidth="560" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b37383a4-904c-4430-afe8-08afc712a28a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="ireport.jasperserver.url" value="http://192.168.5.88:53252/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/reportes/seguimiento_planificacion/informe_planes/seg_pla_di_pnd_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reportes/seguimiento_planificacion/informe_planes/seg_pla_di_pnd"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ds_gabinete" uuid="9a8b1051-4ba7-45cc-bd8b-4de1fc6c0d65">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPeIP"/>
+		<parameter name="GABINETE_CODIGO" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+c.ctlg_valor2 as nombre
+FROM admin.catalogo c
+WHERE 
+c.ctlg_codigo = $P{GABINETE_CODIGO}]]>
+		</queryString>
+		<field name="nombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="catalogo"/>
+		</field>
+	</subDataset>
+	<subDataset name="ds_ods" uuid="78efb88b-4fb6-4268-bdd1-ee8e889cff29">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPeIP"/>
+		<parameter name="ENTIDAD" class="java.lang.Integer"/>
+		<parameter name="ANIO" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select distinct CAST(o.ods_codigo AS INTEGER) as ods,
+o.ods_nombre as nombre
+from planificacion.pnd_meta pm 
+join planificacion.ods_meta om on pm.odsm_codigo = om.odsm_codigo 
+join planificacion.ods o on om.ods_codigo = o.ods_codigo 
+where pm.entd_responsable = $P{ENTIDAD} 
+and pm.pndm_activo = true
+AND $P{ANIO} BETWEEN EXTRACT(YEAR FROM o.ods_fecha_inicio) AND EXTRACT(YEAR FROM o.ods_fecha_fin)]]>
+		</queryString>
+		<field name="ods" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="ods"/>
+			<property name="com.jaspersoft.studio.field.label" value="ods"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="ods"/>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="ods"/>
+		</field>
+	</subDataset>
+	<subDataset name="ds_politica" uuid="e796195b-6d19-43d3-ba18-92473579c3a0">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPeIP"/>
+		<parameter name="ENTIDAD" class="java.lang.Integer"/>
+		<parameter name="ANIO" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select distinct pp.pndp_codigo as politica,
+pp.pndp_nombre as nombre
+from planificacion.pnd_meta pm 
+join planificacion.pnd_politica pp on pm.pndp_codigo = pp.pndp_codigo 
+join planificacion.pnd_objetivo po on pp.pndo_codigo = po.pndo_codigo 
+where pm.entd_responsable = $P{ENTIDAD}
+AND $P{ANIO} BETWEEN EXTRACT(YEAR FROM pp.pndp_fecha_inicio) AND EXTRACT(YEAR FROM pp.pndp_fecha_fin)]]>
+		</queryString>
+		<field name="politica" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="politica"/>
+			<property name="com.jaspersoft.studio.field.label" value="politica"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pnd_politica"/>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pnd_politica"/>
+		</field>
+	</subDataset>
+	<subDataset name="ds_objetivo" uuid="2ef2fcef-f5d4-41eb-8e14-5716d4aa392a">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPeIP"/>
+		<parameter name="ENTIDAD" class="java.lang.Integer"/>
+		<parameter name="ANIO" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select distinct po.pndo_codigo as objetivo,
+po.pndo_nombre as nombre
+from planificacion.pnd_meta pm 
+join planificacion.pnd_politica pp on pm.pndp_codigo = pp.pndp_codigo 
+join planificacion.pnd_objetivo po on pp.pndo_codigo = po.pndo_codigo 
+where pm.entd_responsable = $P{ENTIDAD}
+AND $P{ANIO} BETWEEN EXTRACT(YEAR FROM po.pndo_fecha_inicio) AND EXTRACT(YEAR FROM po.pndo_fecha_fin)]]>
+		</queryString>
+		<field name="objetivo" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="objetivo"/>
+			<property name="com.jaspersoft.studio.field.label" value="objetivo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pnd_objetivo"/>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pnd_objetivo"/>
+		</field>
+	</subDataset>
+	<subDataset name="ds_presupuesto_inversion" uuid="a0fc467c-333a-4c2c-bc4a-8d8f5a24038e">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPeIP"/>
+		<parameter name="ENTIDAD_CODIGO" class="java.lang.Integer"/>
+		<parameter name="GABINETE_CODIGO" class="java.lang.Integer"/>
+		<parameter name="ANIO" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select 
+$P{ANIO} as anio,
+sum(vap.codificado) as codificado,
+sum(vap.devengado) as devengado
+from planificacion.vw_alineacion_presupuestaria vap 
+where vap.ent_codigo in (
+SELECT CAST(e.ent_codigo AS INTEGER) AS entidad
+FROM admin.entidad e
+	left join admin.entidad_grupo eg ON 
+	 e.ent_codigo = eg.ent_codigo 
+	left join admin.catalogo c ON  
+	 eg.ctlg_gabinete = c.ctlg_codigo 
+WHERE 
+e.ent_codigo = $P{ENTIDAD_CODIGO}   or
+eg.ctlg_gabinete = $P{GABINETE_CODIGO} 
+GROUP BY e.ent_codigo
+ORDER BY e.ent_codigo
+)
+and vap.no_cup != ''
+and vap.no_cup is not null]]>
+		</queryString>
+		<field name="anio" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="anio"/>
+			<property name="com.jaspersoft.studio.field.label" value="anio"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="replica"/>
+		</field>
+		<field name="codificado" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="codificado"/>
+			<property name="com.jaspersoft.studio.field.label" value="codificado"/>
+		</field>
+		<field name="devengado" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="devengado"/>
+			<property name="com.jaspersoft.studio.field.label" value="devengado"/>
+		</field>
+	</subDataset>
+	<subDataset name="ds_presupuesto_corriente" uuid="6705489c-27f5-4c1f-b365-4d5e64383492">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPeIP"/>
+		<parameter name="ENTIDAD_CODIGO" class="java.lang.Integer"/>
+		<parameter name="GABINETE_CODIGO" class="java.lang.Integer"/>
+		<parameter name="ANIO" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select
+$P{ANIO}  as anio,
+sum(vap.codificado) as codificado,
+sum(vap.devengado) as devengado
+from planificacion.vw_alineacion_presupuestaria vap 
+where vap.ent_codigo in (
+SELECT CAST(e.ent_codigo AS INTEGER) AS entidad
+FROM admin.entidad e
+	left join admin.entidad_grupo eg ON 
+	 e.ent_codigo = eg.ent_codigo 
+	left join admin.catalogo c ON  
+	 eg.ctlg_gabinete = c.ctlg_codigo 
+WHERE 
+e.ent_codigo = $P{ENTIDAD_CODIGO}   or
+eg.ctlg_gabinete = $P{GABINETE_CODIGO} 
+GROUP BY e.ent_codigo
+ORDER BY e.ent_codigo
+)
+and vap.no_cup = ''
+or vap.no_cup is null]]>
+		</queryString>
+		<field name="anio" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="anio"/>
+			<property name="com.jaspersoft.studio.field.label" value="anio"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="replica"/>
+		</field>
+		<field name="codificado" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="codificado"/>
+			<property name="com.jaspersoft.studio.field.label" value="codificado"/>
+		</field>
+		<field name="devengado" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="devengado"/>
+			<property name="com.jaspersoft.studio.field.label" value="devengado"/>
+		</field>
+	</subDataset>
+	<parameter name="ENTIDAD_CODIGO" class="java.lang.Integer"/>
+	<parameter name="GABINETE_CODIGO" class="java.lang.Integer"/>
+	<parameter name="TIPO_CODIGO" class="java.lang.Integer"/>
+	<parameter name="ANIO" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT CAST(e.ent_codigo AS INTEGER) AS entidad,
+	e.ent_nombre AS nombre,
+	(select c.ctlg_valor2 
+		FROM admin.catalogo c 
+		WHERE c.ctlg_nombre = 'TIPO_PLAN' 
+		AND c.ctlg_codigo = $P{TIPO_CODIGO}) as tipo,
+	$P{ANIO} as anio,
+		(select c.ctlg_valor2
+		from admin.catalogo c
+		where c.ctlg_codigo = $P{GABINETE_CODIGO}) as gabinete
+FROM admin.entidad e
+	left join admin.entidad_grupo eg ON 
+	 e.ent_codigo = eg.ent_codigo 
+	left join admin.catalogo c ON 
+	 eg.ctlg_gabinete = c.ctlg_codigo 
+WHERE 
+e.ent_codigo = $P{ENTIDAD_CODIGO}   or eg.ctlg_gabinete = $P{GABINETE_CODIGO} 
+GROUP BY e.ent_codigo
+ORDER BY e.ent_codigo]]>
+	</queryString>
+	<field name="entidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="entidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="entidad"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="entidad"/>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+	</field>
+	<field name="anio" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="anio"/>
+		<property name="com.jaspersoft.studio.field.label" value="anio"/>
+	</field>
+	<field name="gabinete" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gabinete"/>
+		<property name="com.jaspersoft.studio.field.label" value="gabinete"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="20" y="0" width="520" height="20" uuid="d60c0f6c-d983-4405-b2a4-da39eb2b6662">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORTE DEL AÑO " + $F{anio}  + " - " + $F{tipo}.toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="520" height="20" uuid="af99d19a-1086-4e3c-92c0-9883c184ba90">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="20" y="0" width="520" height="20" uuid="c2e2ecda-0456-4000-8f64-b989ebc50614">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ds_ods" uuid="3eb4a2c3-e08b-413e-97e6-ce730038e510">
+						<datasetParameter name="ENTIDAD">
+							<datasetParameterExpression><![CDATA[$F{entidad}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="ANIO">
+							<datasetParameterExpression><![CDATA[$P{ANIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="520" uuid="4cc762e6-0b2b-4c02-a485-3307db627a17">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="520" height="30" uuid="66ce9313-f50d-47c2-97a7-9d6e6a99dd1d">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[AGENDA 2030]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="520" height="30" uuid="d416c251-6e32-47db-8d7a-5dc84b540dcd"/>
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="20" y="0" width="520" height="20" uuid="c39c1685-f3f8-4b03-ac25-1a45e4290d7d">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ds_objetivo" uuid="e933c667-cb00-4d34-8c0e-bb8bf1de2b61">
+						<datasetParameter name="ENTIDAD">
+							<datasetParameterExpression><![CDATA[$F{entidad}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="ANIO">
+							<datasetParameterExpression><![CDATA[$P{ANIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="520" uuid="e32b3eda-ea3a-4b3d-acd2-0b86906cd7c1">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table 2_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="520" height="30" uuid="ed883d0c-164e-49a2-a863-fe89719bfd37">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[OBJETIVO]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 2_TD" height="30">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="520" height="30" uuid="5b6f9fd5-ae5b-41ed-81fb-22f40b684fd9"/>
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="20" y="0" width="520" height="20" uuid="60f16184-1967-4ec3-908b-e373b57aa8d0">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ds_politica" uuid="f200c0da-51c4-4c01-bb55-0d878c9fbab3">
+						<datasetParameter name="ENTIDAD">
+							<datasetParameterExpression><![CDATA[$F{entidad}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="ANIO">
+							<datasetParameterExpression><![CDATA[$P{ANIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="520" uuid="b059b661-f09c-425f-83bc-6f8a3077bb48">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="520" height="30" uuid="e86720c3-f0b3-419f-86f6-8f5c5ec4dbd9"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[POLITICA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="520" height="30" uuid="1e88a75c-13b0-4721-b695-f8f68952b5bf"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="0" y="0" width="520" height="20" uuid="cb735749-8478-4bc6-ba2e-93a60cc4e295">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="ENTIDAD">
+					<subreportParameterExpression><![CDATA[$F{entidad}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ANIO">
+					<subreportParameterExpression><![CDATA[$P{ANIO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["repo:detalle.jrxml"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="440">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<barChart>
+				<chart evaluationTime="Report" renderType="svg">
+					<reportElement x="20" y="20" width="520" height="200" uuid="09c35e60-881d-40ae-ace4-005b762008a2">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="ds_presupuesto_inversion" uuid="2c3cba92-88a0-4293-a73e-370cd7cb3cac">
+							<datasetParameter name="ANIO">
+								<datasetParameterExpression><![CDATA[$P{ANIO}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="ENTIDAD_CODIGO">
+								<datasetParameterExpression><![CDATA[$P{ENTIDAD_CODIGO}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="GABINETE_CODIGO">
+								<datasetParameterExpression><![CDATA[$P{GABINETE_CODIGO}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Codificado"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{anio}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{codificado}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Devengado"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{anio}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{devengado}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot>
+						<seriesColor seriesOrder="0" color="#000080"/>
+						<seriesColor seriesOrder="1" color="#87CEEB"/>
+					</plot>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<textField>
+				<reportElement x="20" y="0" width="520" height="20" uuid="40daba68-ff00-467a-a1ee-8e8483a60d9a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Presupuesto inversión"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="220" width="520" height="20" uuid="4d4c7c14-e2b3-4fd9-bfef-a27596bbe097">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Presupuesto corriente"]]></textFieldExpression>
+			</textField>
+			<barChart>
+				<chart evaluationTime="Report" renderType="svg">
+					<reportElement x="20" y="240" width="520" height="200" uuid="4e0a720f-75c6-4cf7-ba69-ceb832f06738">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="ds_presupuesto_corriente" uuid="e7ef3d47-8719-458d-9425-e4bb06d0b89c">
+							<datasetParameter name="ANIO">
+								<datasetParameterExpression><![CDATA[$P{ANIO}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="ENTIDAD_CODIGO">
+								<datasetParameterExpression><![CDATA[$P{ENTIDAD_CODIGO}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="GABINETE_CODIGO">
+								<datasetParameterExpression><![CDATA[$P{GABINETE_CODIGO}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Codificado"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{anio}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{codificado}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Devengado"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{anio}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{devengado}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot>
+						<seriesColor seriesOrder="0" color="#000080"/>
+						<seriesColor seriesOrder="1" color="#87CEEB"/>
+					</plot>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="grafica" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20568ad3-487c-488d-8f5a-ddd1fb07b555">
+	<property name="ireport.jasperserver.url" value="http://192.168.5.88:53252/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/reportes/seguimiento_planificacion/informe_planes/seg_pla_di_pnd_files/graficapnd.jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reportes/seguimiento_planificacion/informe_planes/seg_pla_di_pnd"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="base 88"/>
+	<subDataset name="grafica" uuid="023abba5-9ffe-4418-afe9-f16571869640">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="base 88"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="META" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[134]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select pim.pndim_anio as anio,
+coalesce(pim.pndim_meta,0) as valormeta,
+coalesce(pim.pndim_resultado,0) as resultado,
+pim.pndi_codigo 
+from planificacion.pnd_indicador_meta pim 
+join planificacion.pnd_indicador pi2 on pim.pndi_codigo = pi2.pndi_codigo
+join planificacion.pnd_meta pm on pi2.pndm_codigo = pm.pndm_codigo 
+join planificacion.pnd_politica pp on pm.pndp_codigo = pp.pndp_codigo 
+join planificacion.pnd_objetivo po on pp.pndo_codigo = po.pndo_codigo 
+where pm.pndm_activo = true
+and pim.pndim_activo = true
+and pim.pndi_codigo = (select pi2.pndi_codigo  from planificacion.pnd_indicador pi2 
+      where pi2.pndm_codigo  = $P{META} and pi2.pndi_estado = true 
+      order by pi2.pndi_fecha_creacion  desc limit 1)
+order by pim.pndim_anio asc;]]>
+		</queryString>
+		<field name="anio" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="anio"/>
+			<property name="com.jaspersoft.studio.field.label" value="anio"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pnd_indicador_meta"/>
+		</field>
+		<field name="valormeta" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="valormeta"/>
+			<property name="com.jaspersoft.studio.field.label" value="valormeta"/>
+		</field>
+		<field name="resultado" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="resultado"/>
+			<property name="com.jaspersoft.studio.field.label" value="resultado"/>
+		</field>
+	</subDataset>
+	<parameter name="META" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[134]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from planificacion.pnd_meta pm 
+where pm.pndm_codigo = $P{META}]]>
+	</queryString>
+	<field name="pndm_codigo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndp_codigo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="pndp_codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndp_codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_identificador" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_identificador"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_identificador"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_estado" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_estado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="entd_responsable" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="entd_responsable"/>
+		<property name="com.jaspersoft.studio.field.label" value="entd_responsable"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="odsm_codigo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="odsm_codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="odsm_codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_fecha_inicio" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_fecha_inicio"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_fecha_inicio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_fecha_fin" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_fecha_fin"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_fecha_fin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_activo" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_activo"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_activo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="usr_creacion" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="usr_creacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="usr_creacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_fecha_creacion" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_fecha_creacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_fecha_creacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="usr_ultima_modificacion" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="usr_ultima_modificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="usr_ultima_modificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_fecha_ultima_modificacion" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_fecha_ultima_modificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_fecha_ultima_modificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_ip_creacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_ip_creacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_ip_creacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<field name="pndm_ip_modificacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pndm_ip_modificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="pndm_ip_modificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pnd_meta"/>
+	</field>
+	<detail>
+		<band height="200" splitType="Stretch">
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="20" y="0" width="440" height="200" uuid="6af047d0-f31c-46e1-91bc-dd6e7e94fb01">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="grafica" uuid="9182940f-625a-43fa-9190-8cfd97707a6b">
+							<datasetParameter name="META">
+								<datasetParameterExpression><![CDATA[$P{META}]]></datasetParameterExpression>
+							</datasetParameter>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Meta"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{anio}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{valormeta}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Resultado"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{anio}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{resultado}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot>
+						<seriesColor seriesOrder="0" color="#000080"/>
+						<seriesColor seriesOrder="1" color="#87CEEB"/>
+					</plot>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+		</band>
+	</detail>
+</jasperReport>
